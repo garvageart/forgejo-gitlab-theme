@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root, [data-theme=gitlab-light] {
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-150: #ececee;
+  --zinc-200: #e4e4e7;
+  --zinc-250: #dcdce0;
+  --zinc-300: #d4d4d8;
+  --zinc-350: #babac1;
+  --zinc-400: #a1a1aa;
+  --zinc-450: #898992;
+  --zinc-500: #71717a;
+  --zinc-550: #61616a;
+  --zinc-600: #52525b;
+  --zinc-650: #484850;
+  --zinc-700: #3f3f46;
+  --zinc-750: #333338;
+  --zinc-800: #27272a;
+  --zinc-850: #1f1f23;
+  --zinc-900: #18181b;
+
+  --fonts-override: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --fonts-regular: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --fonts-monospace: 'JetBrains Mono', SFMono-Regular, Consolas, monospace !important;
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  --font-family-monospace: 'JetBrains Mono', SFMono-Regular, Consolas, monospace !important;
+
+  /* GitLab Orange Accent */
+  --color-primary: #e24329 !important;
+  --color-primary-contrast: #ffffff !important;
+  --color-primary-dark-1: #d03820 !important;
+  --color-primary-dark-2: #c2331c !important;
+  --color-primary-dark-3: #a82713 !important;
+  --color-primary-dark-4: #8e1c0c !important;
+  --color-primary-light-1: #fc6d26 !important;
+  --color-primary-light-2: #ff8547 !important;
+  --color-primary-light-3: #ffa06e !important;
+
+  --color-primary-alpha-10: rgba(226, 67, 41, 0.08) !important;
+  --color-primary-alpha-20: rgba(226, 67, 41, 0.15) !important;
+  --color-primary-alpha-30: rgba(226, 67, 41, 0.25) !important;
+
+  --color-secondary: var(--zinc-200) !important;
+  --color-secondary-dark-1: var(--zinc-200) !important;
+  --color-secondary-dark-2: var(--zinc-300) !important;
+  --color-secondary-dark-3: var(--zinc-300) !important;
+  --color-secondary-dark-4: var(--zinc-400) !important;
+  --color-secondary-alpha-10: #d4d4d819 !important;
+  --color-secondary-alpha-20: #d4d4d833 !important;
+  --color-secondary-alpha-30: #d4d4d84b !important;
+  --color-secondary-alpha-40: #d4d4d866 !important;
+  --color-secondary-alpha-50: #d4d4d880 !important;
+  --color-secondary-alpha-60: #d4d4d899 !important;
+  --color-secondary-alpha-70: #d4d4d8b3 !important;
+  --color-secondary-alpha-80: #d4d4d8cc !important;
+  --color-secondary-alpha-90: #d4d4d8e1 !important;
+
+  --color-body: #f9f9fb !important;
+  --color-box-header: var(--zinc-100) !important;
+  --color-box-body: #ffffff !important;
+  --color-box-body-highlight: var(--zinc-150) !important;
+
+  --color-text-dark: #000000 !important;
+  --color-text: var(--zinc-900) !important;
+  --color-text-light: var(--zinc-700) !important;
+  --color-text-light-1: var(--zinc-650) !important;
+  --color-text-light-2: var(--zinc-600) !important;
+  --color-text-light-3: var(--zinc-550) !important;
+
+  --color-footer: #1f1e24 !important;
+  --color-timeline: var(--zinc-200) !important;
+
+  --color-input-text: var(--zinc-800) !important;
+  --color-input-background: #ffffff !important;
+  --color-input-toggle-background: #ffffff !important;
+  --color-input-border: var(--zinc-300) !important;
+  --color-input-border-hover: var(--zinc-400) !important;
+
+  --color-header-wrapper: #1f1e24 !important;
+  --color-light: #ffffffcc !important;
+  --color-hover: #e4e4e4aa !important;
+  --color-active: #e2e2e5 !important;
+  --color-menu: var(--zinc-100) !important;
+  --color-card: #ffffff !important;
+
+  --color-nav-bg: #1f1e24 !important;
+  --color-nav-hover-bg: #2b2a32 !important;
+  --color-nav-text: #ececef !important;
+  --color-secondary-nav-bg: var(--color-body) !important;
+
+  --color-accent: #fc6d26 !important;
+  --color-small-accent: #ff8547 !important;
+  color-scheme: light !important;
+}
+
+body {
+  font-family: var(--fonts-override) !important;
+  background-color: var(--color-body) !important;
+  color: var(--color-text) !important;
+}
+
+code, pre, .mono, .monospace {
+  font-family: var(--fonts-monospace) !important;
+}
+
+/* Commit Table & Card Overrides for Light Mode */
+#commits-table, #commits-table tr, #commits-table td, #commits-table th,
+.repository #commits-table, .repository #commits-table tr, .repository #commits-table td,
+.repository .commit-header, .repository .commit-box, .repository .commit-section,
+.commit-list, .commit-list .item, .commit-list-row, .commit-body, .commit-summary,
+.singular-commit, .latest-commit, .shabox, .sha-box,
+.timeline-item, .diff-file-box, .diff-box, .file-content, .code-view,
+table, tbody, tr, td, th {
+    background-color: #ffffff !important;
+    border-color: #dcdcde !important;
+    color: #28272d !important;
+}
+
+#commits-table tr:hover, #rev-list li:hover, .commit-list .item:hover, tr:hover {
+    background-color: #f2f2f5 !important;
+}
+
+/* Toggle Switch & Slider Overrides */
+.ui.toggle.checkbox label::before,
+.ui.checkbox.toggle label::before,
+.ui.checkbox.slider label::before,
+.ui.checkbox label::before {
+    background-color: #dcdcde !important;
+    background: #dcdcde !important;
+    border: 1px solid #bfbfc3 !important;
+}
+
+.ui.toggle.checkbox input:checked ~ label::before,
+.ui.checkbox.toggle input:checked ~ label::before,
+.ui.checkbox.slider input:checked ~ label::before {
+    background-color: var(--color-primary) !important;
+    background: var(--color-primary) !important;
+}
